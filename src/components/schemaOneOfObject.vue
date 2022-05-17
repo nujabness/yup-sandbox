@@ -10,7 +10,7 @@
       <br />
 
       <br />
-      {{ myField }}
+      {{ root }}
     </v-form>
 </template>
 

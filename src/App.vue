@@ -1,25 +1,25 @@
 <template>
   <v-app>
     <v-main>
-      <schema-one-of-string/>
+<!--      <schema-one-of-string/>-->
 <!--      <schema-any-of-required/>-->
-<!--      <schema-one-of-object/>-->
+      <schema-one-of-object/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import schemaOneOfString from "@/components/schemaOneOfString";
+// import schemaOneOfString from "@/components/schemaOneOfString";
 // import schemaAnyOfRequired from "@/components/schemaAnyOfRequired";
-// import schemaOneOfObject from "@/components/schemaOneOfObject";
+import schemaOneOfObject from "@/components/schemaOneOfObject";
 
 export default {
   name: 'App',
 
   components: {
-    schemaOneOfString,
+    // schemaOneOfString,
     // schemaAnyOfRequired,
-    // schemaOneOfObject,
+    schemaOneOfObject,
   },
 
   data: () => ({
