@@ -24,6 +24,7 @@ const schema = {
   "type": "object",
   "properties": {
     "myField": {
+      "type": "string",
       "oneOf": [
         {"const": "value1"},
         {"const": "value2"}
