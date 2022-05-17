@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "myField": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "enum": [
+            "value1",
+            "other"
+          ]
+        },
+        "questionOther": {
+          "type": "string"
+        }
+      },
+      "anyOf": [
+        {
+          "properties": {
+            "question": {
+              "const": "other"
+            }
+          },
+          "required": [
+            "question",
+            "questionOther"
+          ]
+        },
+        {
+          "properties": {
+            "question": {
+              "not": {
+                "enum": [
+                  "other"
+                ]
+              }
+            }
+          },
+          "required": [
+            "question"
+          ]
+        }
+      ]
+    }
+  }
+}
