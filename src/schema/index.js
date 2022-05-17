@@ -1,1 +1,1 @@
-export { default as schema } from './schema1.json';
+export { default as schema } from './schemaOneOfString.json';

@@ -1,19 +1,25 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld/>
+      <schema-one-of-string/>
+<!--      <schema-any-of-required/>-->
+<!--      <schema-one-of-object/>-->
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import schemaOneOfString from "@/components/schemaOneOfString";
+// import schemaAnyOfRequired from "@/components/schemaAnyOfRequired";
+// import schemaOneOfObject from "@/components/schemaOneOfObject";
 
 export default {
   name: 'App',
 
   components: {
-    HelloWorld,
+    schemaOneOfString,
+    // schemaAnyOfRequired,
+    // schemaOneOfObject,
   },
 
   data: () => ({

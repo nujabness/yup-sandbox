@@ -22,20 +22,37 @@ import { buildYup } from 'schema-to-yup';
 const schema = {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "required": ["myField"],
   "properties": {
     "myField": {
       "type": "object",
-      "required": ["question"],
-      "properties": {
-        "question": {
-          "type": "string",
-          "enum": [
-            "value1",
-            "other"
-          ]
+      "oneOf": [
+        {
+          "type": "object",
+          "required": ["question"],
+          "properties": {
+            "question": {
+              "type": "string",
+              "enum": [
+                "value1",
+                "value2"
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "questionOther"],
+          "properties": {
+            "question": {
+              "type": "string",
+              "enum": ["other"]
+            },
+            "questionOther": {
+              "type": "string"
+            }
+          }
         }
-      }
+      ]
     }
   }
 }

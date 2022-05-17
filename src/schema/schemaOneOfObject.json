@@ -3,6 +3,7 @@
   "type": "object",
   "properties": {
     "myField": {
+      "type": "object",
       "oneOf": [
         {
           "type": "object",
