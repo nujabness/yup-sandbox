@@ -4,10 +4,19 @@
   "properties": {
     "myField": {
       "type": "string",
-      "oneOf": [
-        {"const": "value1"},
-        {"const": "value2"}
+      "enum": [
+        "value1",
+        "value2"
       ]
-    }
+    },
+    'otherInvestmentSource' : {
+      'type' : 'string',
+      'when' : {
+        'myField': {
+          'is': 'value1',
+          'then' : {'required' : true}
+        },
+      }
+    },
   }
 }
